@@ -7,8 +7,8 @@ const amazonService = require("./services/amazon");
 const wooCommerceService = require("./services/woocommerce");
 const app = require("./app");
 
-// Add email service import
-require('./email/sendWelcomeEmails');
+// Update the email service import path
+require('../email-service/sendWelcomeEmails');
 logger.info("✅ Email service initialized");
 const Order = require("./models/Order");
 const routes = require("./routes/v1"); // ✅ Ensure this is correctly imported

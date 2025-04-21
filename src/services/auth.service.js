@@ -1,5 +1,7 @@
 const { User, Admin, Author, Employee } = require('../models');
-const { sendWelcomeEmail } = require('../email/sendWelcomeEmails');
+// const { sendWelcomeEmail } = require('../email/sendWelcomeEmails');
+// Update the import path to point to the new email-service location
+const sendWelcomeEmail = require('../../email-service/sendWelcomeEmails');
 
 async function createUser(user) {
   return User.create(user);
@@ -50,3 +52,6 @@ module.exports = {
   createEmployee,
   // getAllAuthors
 };
+
+
+
